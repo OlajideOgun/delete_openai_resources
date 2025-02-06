@@ -18,6 +18,27 @@ A Python script for managing and deleting OpenAI resources, including assistants
 
 - Python 3.6+
 - `requests` library
+- An OpenAI API key ([Find your API key here](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key))
+
+### Important Notice on Threads API
+
+The `list_threads` function is not part of the official OpenAI API. To retrieve threads, you need to extract your session ID while logged into [OpenAI's platform](https://platform.openai.com/threads).
+
+#### How to Get Your Session ID
+
+1. Log in to [OpenAI's platform](https://platform.openai.com/threads).
+2. Open the browser developer tools (F12 or right-click and select 'Inspect').
+3. Go to the 'Network' tab and filter for `fetch` or `XHR` requests.
+4. Refresh the page and look for a request related to threads.
+5. Find the `Authorization` or session-related key in the request headers.
+6. Copy the session ID, which typically looks like:
+   ```
+   sess-qOvvKH6Nvn6QKpqtpkjedSKqwzMeBj0FFqnKHe5S
+   ```
+7. Use this session ID in the script to authenticate `list_threads` requests.
+
+- Python 3.6+
+- `requests` library
 
 ## Installation
 
@@ -123,7 +144,7 @@ The script provides detailed output, including:
 5. Find the `Authorization` or session-related key in the request headers.
 6. Copy the session ID, which typically looks like:
    ```
-   sess-qOvvkhlby7865ekhhbklbfjkj
+   sess-bkjhfcy5esrjkgbyvo8lvhf5S
    ```
 7. Use this session ID in the script to authenticate `list_threads` requests.
 
