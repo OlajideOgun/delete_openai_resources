@@ -94,12 +94,6 @@ python deletefiles.py [OPTIONS]
    python deletefiles.py --help
    ```
 
-## Safety Features
-
-- Confirmation prompts before deletion
-- Default 'No' option for safety
-- Resource counting before deletion
-- Detailed success/failure logging
 
 ## Configuration
 
@@ -108,25 +102,6 @@ The script includes several configurable constants:
 - `MAX_WORKERS` : Number of parallel deletion workers (default: 10)
 - `TIMEOUT` : API request timeout in seconds (default: 30)
 
-## Output
-
-The script provides detailed output, including:
-- Number of resources found
-- Deletion progress
-- Success/failure status for each operation
-- Total execution time
-
-## Error Handling
-
-- API errors are caught and logged
-- Network timeouts are handled gracefully
-- Invalid responses are reported
-
-## Security Notes
-
-- Keep your API keys secure
-- Don't commit the script with real API keys
-- Consider using environment variables for sensitive credentials
 
 ## Limitations
 
@@ -147,21 +122,3 @@ The script provides detailed output, including:
    sess-bkjhfcy5esrjkgbyvo8lvhf5S
    ```
 7. Use this session ID in the script to authenticate `list_threads` requests.
-
-
-- API rate limits may apply
-- Large deletions may take significant time
-- Some operations require specific API permissions
-
-## Contributing
-
-Feel free to submit issues, fork the repository, and create pull requests for any improvements.
-
-## License
-
-MIT License
-
-## Disclaimer
-
-Use this script carefully as deletions are permanent and cannot be undone. Always ensure you have backups of important data before running deletion operations.
-
