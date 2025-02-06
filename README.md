@@ -60,7 +60,7 @@ The `list_threads` function is not part of the official OpenAI API. To retrieve 
 ### Basic Command Structure
 
 ```bash
-python deletefiles.py [OPTIONS]
+python main.py [OPTIONS]
 ```
 
 ### Available Options
@@ -76,22 +76,22 @@ python deletefiles.py [OPTIONS]
 
 1. Delete all resources:
    ```bash
-   python deletefiles.py --all
+   python main.py --all
    ```
 
 2. Delete only files and threads:
    ```bash
-   python deletefiles.py --files --threads
+   python main.py --files --threads
    ```
 
 3. Delete only assistants:
    ```bash
-   python deletefiles.py --assistants
+   python main.py --assistants
    ```
 
 4. Show help message:
    ```bash
-   python deletefiles.py --help
+   python main.py --help
    ```
 
 
